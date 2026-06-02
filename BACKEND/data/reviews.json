@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "userId": "6a1f0262c913ae7c143ce851",
+      "orderId": "6a1f0262c913ae7c143ce875",
+      "stars": 5,
+      "remarks": "Pizza was hot, fresh, and delivered on time.",
+      "createdAt": "2026-03-01T12:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "restaurantId": "3",
+      "userId": "6a1f0262c913ae7c143ce852",
+      "orderId": "6a1f0262c913ae7c143ce878",
+      "stars": 4,
+      "remarks": "Great curry and naan. Packaging was good.",
+      "createdAt": "2026-03-02T12:00:00.000Z"
+    }
+  ]
+}

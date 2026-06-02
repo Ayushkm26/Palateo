@@ -1,0 +1,383 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@palateo.com",
+      "password": "Admin@123",
+      "role": "super_admin"
+    }
+  ],
+  "users": [
+    {
+      "username": "ansh",
+      "email": "ansh@example.com",
+      "password": "user123"
+    },
+    {
+      "username": "gorang",
+      "email": "gorang@example.com",
+      "password": "user123"
+    },
+    {
+      "username": "priya",
+      "email": "priya@example.com",
+      "password": "user123"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Pizza Palace",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800",
+      "categories": ["Pizza", "Italian", "Fast Food"],
+      "rating": 4.6,
+      "deliveryTime": "30-40 mins",
+      "address": "123 Main Street, New York, NY",
+      "cuisine": "Italian",
+      "isOpen": true,
+      "hasFreeDelivery": true,
+      "minOrder": 199,
+      "description": "Freshly baked pizzas, pastas, garlic bread, and Italian comfort food."
+    },
+    {
+      "id": "2",
+      "name": "Sushi World",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800",
+      "categories": ["Sushi", "Japanese", "Seafood"],
+      "rating": 4.7,
+      "deliveryTime": "25-35 mins",
+      "address": "456 Ocean Drive, Los Angeles, CA",
+      "cuisine": "Japanese",
+      "isOpen": true,
+      "hasFreeDelivery": false,
+      "minOrder": 299,
+      "description": "Fresh sushi rolls, sashimi, soups, and Japanese specials."
+    },
+    {
+      "id": "3",
+      "name": "Curry Haven",
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800",
+      "categories": ["Indian", "Curry", "Tandoori"],
+      "rating": 4.5,
+      "deliveryTime": "35-45 mins",
+      "address": "789 Spice Lane, Chicago, IL",
+      "cuisine": "Indian",
+      "isOpen": true,
+      "hasFreeDelivery": true,
+      "minOrder": 249,
+      "description": "Indian curries, tandoori dishes, biryani, naan, and desserts."
+    },
+    {
+      "id": "4",
+      "name": "Burger Bite",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800",
+      "categories": ["Burger", "American", "Fast Food"],
+      "rating": 4.3,
+      "deliveryTime": "20-30 mins",
+      "address": "321 Food Court, Miami, FL",
+      "cuisine": "American",
+      "isOpen": true,
+      "hasFreeDelivery": false,
+      "minOrder": 149,
+      "description": "Juicy burgers, crispy fries, wraps, and chilled drinks."
+    }
+  ],
+  "restaurantOwners": [
+    {
+      "id": "1",
+      "username": "john_pizza",
+      "email": "john@pizzapalace.com",
+      "password": "password123",
+      "restaurantId": 1
+    },
+    {
+      "id": "2",
+      "username": "maria_sushi",
+      "email": "maria@sushiworld.com",
+      "password": "password123",
+      "restaurantId": 2
+    },
+    {
+      "id": "3",
+      "username": "raj_curry",
+      "email": "raj@curryhaven.com",
+      "password": "password123",
+      "restaurantId": 3
+    },
+    {
+      "id": "4",
+      "username": "sarah_burger",
+      "email": "sarah@burgerbite.com",
+      "password": "password123",
+      "restaurantId": 4
+    }
+  ],
+  "menus": [
+    {
+      "restaurantId": "1",
+      "items": [
+        {
+          "id": "1",
+          "name": "Margherita Pizza",
+          "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600",
+          "price": 299,
+          "type": "Veg",
+          "description": "Classic pizza with tomato sauce, mozzarella, and basil.",
+          "rating": 4.6
+        },
+        {
+          "id": "2",
+          "name": "Pepperoni Pizza",
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600",
+          "price": 399,
+          "type": "Non-Veg",
+          "description": "Cheesy pizza topped with pepperoni slices.",
+          "rating": 4.7
+        },
+        {
+          "id": "3",
+          "name": "Garlic Bread",
+          "image": "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=600",
+          "price": 149,
+          "type": "Veg",
+          "description": "Toasted bread with garlic butter and herbs.",
+          "rating": 4.4
+        }
+      ]
+    },
+    {
+      "restaurantId": "2",
+      "items": [
+        {
+          "id": "1",
+          "name": "California Roll",
+          "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600",
+          "price": 449,
+          "type": "Non-Veg",
+          "description": "Crab, avocado, and cucumber sushi roll.",
+          "rating": 4.7
+        },
+        {
+          "id": "2",
+          "name": "Miso Soup",
+          "image": "https://images.unsplash.com/photo-1604943652949-64d1c36501e7?w=600",
+          "price": 159,
+          "type": "Veg",
+          "description": "Traditional Japanese soup with tofu and seaweed.",
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "restaurantId": "3",
+      "items": [
+        {
+          "id": "1",
+          "name": "Butter Chicken",
+          "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600",
+          "price": 349,
+          "type": "Non-Veg",
+          "description": "Creamy tomato-based chicken curry.",
+          "rating": 4.8
+        },
+        {
+          "id": "2",
+          "name": "Paneer Tikka Masala",
+          "image": "https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=600",
+          "price": 299,
+          "type": "Veg",
+          "description": "Paneer cubes cooked in spicy masala gravy.",
+          "rating": 4.6
+        },
+        {
+          "id": "3",
+          "name": "Garlic Naan",
+          "image": "https://images.unsplash.com/photo-1610192244261-3f33de3f72e1?w=600",
+          "price": 79,
+          "type": "Veg",
+          "description": "Soft naan topped with garlic and butter.",
+          "rating": 4.5
+        }
+      ]
+    },
+    {
+      "restaurantId": "4",
+      "items": [
+        {
+          "id": "1",
+          "name": "Classic Cheeseburger",
+          "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
+          "price": 249,
+          "type": "Non-Veg",
+          "description": "Beef patty, cheese, lettuce, tomato, and house sauce.",
+          "rating": 4.4
+        },
+        {
+          "id": "2",
+          "name": "Veggie Burger",
+          "image": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600",
+          "price": 199,
+          "type": "Veg",
+          "description": "Vegetable patty with cheese, lettuce, and sauce.",
+          "rating": 4.2
+        },
+        {
+          "id": "3",
+          "name": "French Fries",
+          "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600",
+          "price": 129,
+          "type": "Veg",
+          "description": "Crispy golden fries with seasoning.",
+          "rating": 4.3
+        }
+      ]
+    }
+  ],
+  "carts": [
+    {
+      "userIndex": 0,
+      "items": [
+        {
+          "itemId": "1",
+          "name": "Margherita Pizza",
+          "price": 299,
+          "quantity": 1,
+          "restaurantId": "1",
+          "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600"
+        },
+        {
+          "itemId": "3",
+          "name": "Garlic Bread",
+          "price": 149,
+          "quantity": 2,
+          "restaurantId": "1",
+          "image": "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=600"
+        }
+      ]
+    },
+    {
+      "userIndex": 1,
+      "items": [
+        {
+          "itemId": "1",
+          "name": "Butter Chicken",
+          "price": 349,
+          "quantity": 1,
+          "restaurantId": "3",
+          "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "restaurantId": "1",
+      "userIndex": 0,
+      "name": "ansh",
+      "address": "11 Park Street, New York",
+      "phone": "9876543210",
+      "status": "pending",
+      "cartItems": [
+        {
+          "itemId": "1",
+          "name": "Margherita Pizza",
+          "price": 299,
+          "quantity": 1,
+          "restaurantId": "1",
+          "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600"
+        },
+        {
+          "itemId": "3",
+          "name": "Garlic Bread",
+          "price": 149,
+          "quantity": 2,
+          "restaurantId": "1",
+          "image": "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=600"
+        }
+      ]
+    },
+    {
+      "restaurantId": "3",
+      "userIndex": 1,
+      "name": "gorang",
+      "address": "48 Spice Road, Chicago",
+      "phone": "9123456780",
+      "status": "confirmed",
+      "cartItems": [
+        {
+          "itemId": "1",
+          "name": "Butter Chicken",
+          "price": 349,
+          "quantity": 1,
+          "restaurantId": "3",
+          "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600"
+        },
+        {
+          "itemId": "3",
+          "name": "Garlic Naan",
+          "price": 79,
+          "quantity": 2,
+          "restaurantId": "3",
+          "image": "https://images.unsplash.com/photo-1610192244261-3f33de3f72e1?w=600"
+        }
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "How to Choose the Best Restaurant Online",
+      "content": "A good restaurant choice depends on ratings, delivery time, menu variety, reviews, and your current craving. Palateo helps customers compare restaurants quickly and order with confidence.",
+      "author": "Palateo Team",
+      "date": "2026-01-10T10:00:00.000Z",
+      "category": "Food Guide",
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900",
+      "tags": ["restaurants", "ordering", "food"]
+    },
+    {
+      "id": 2,
+      "title": "Why Fresh Menus Matter",
+      "content": "Updated menus make ordering smoother for customers and help restaurants avoid unavailable-item confusion. Owners can use Palateo to add and remove items from their dashboard.",
+      "author": "Palateo Team",
+      "date": "2026-02-05T10:00:00.000Z",
+      "category": "Restaurant Tips",
+      "img": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900",
+      "tags": ["menu", "owners", "restaurants"]
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Neha Sharma",
+      "email": "neha@example.com",
+      "message": "I want to know whether Palateo supports restaurant offers and coupons."
+    },
+    {
+      "id": 2,
+      "name": "Amit Patel",
+      "email": "amit@example.com",
+      "message": "Please add more restaurants near my area."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "userId": "seed-user-1",
+      "orderId": "seed-order-1",
+      "stars": 5,
+      "remarks": "Pizza was hot, fresh, and delivered on time.",
+      "createdAt": "2026-03-01T12:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "restaurantId": "3",
+      "userId": "seed-user-2",
+      "orderId": "seed-order-2",
+      "stars": 4,
+      "remarks": "Great curry and naan. Packaging was good.",
+      "createdAt": "2026-03-02T12:00:00.000Z"
+    }
+  ]
+}

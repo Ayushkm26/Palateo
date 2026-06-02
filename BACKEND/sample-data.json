@@ -1,0 +1,409 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@restaurant.com",
+      "password": "$2b$10$YourHashedPasswordHere",
+      "role": "super_admin"
+    }
+  ],
+  "restaurantowners": [
+    {
+      "username": "john_pizza",
+      "email": "john@pizzapalace.com",
+      "password": "$2b$10$YourHashedPasswordHere1",
+      "restaurantName": "Pizza Palace",
+      "phone": "+1234567890",
+      "address": "123 Main Street, New York, NY 10001"
+    },
+    {
+      "username": "maria_sushi",
+      "email": "maria@sushiworld.com",
+      "password": "$2b$10$YourHashedPasswordHere2",
+      "restaurantName": "Sushi World",
+      "phone": "+1234567891",
+      "address": "456 Ocean Drive, Los Angeles, CA 90001"
+    },
+    {
+      "username": "raj_curry",
+      "email": "raj@curryhaven.com",
+      "password": "$2b$10$YourHashedPasswordHere3",
+      "restaurantName": "Curry Haven",
+      "phone": "+1234567892",
+      "address": "789 Spice Lane, Chicago, IL 60601"
+    },
+    {
+      "username": "sarah_burger",
+      "email": "sarah@burgerbite.com",
+      "password": "$2b$10$YourHashedPasswordHere4",
+      "restaurantName": "Burger Bite",
+      "phone": "+1234567893",
+      "address": "321 Food Court, Miami, FL 33101"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Pizza Palace",
+      "cuisine": "Italian",
+      "location": "123 Main Street, New York, NY 10001",
+      "rating": 4.5,
+      "deliveryTime": "30-40 mins",
+      "priceRange": "$$",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500",
+      "description": "Authentic Italian pizzas with fresh ingredients",
+      "phone": "+1234567890",
+      "openingHours": "11:00 AM - 11:00 PM",
+      "isOpen": true
+    },
+    {
+      "name": "Sushi World",
+      "cuisine": "Japanese",
+      "location": "456 Ocean Drive, Los Angeles, CA 90001",
+      "rating": 4.7,
+      "deliveryTime": "25-35 mins",
+      "priceRange": "$$$",
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=500",
+      "description": "Fresh sushi and Japanese cuisine",
+      "phone": "+1234567891",
+      "openingHours": "12:00 PM - 10:00 PM",
+      "isOpen": true
+    },
+    {
+      "name": "Curry Haven",
+      "cuisine": "Indian",
+      "location": "789 Spice Lane, Chicago, IL 60601",
+      "rating": 4.6,
+      "deliveryTime": "35-45 mins",
+      "priceRange": "$$",
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500",
+      "description": "Authentic Indian curries and tandoori dishes",
+      "phone": "+1234567892",
+      "openingHours": "11:30 AM - 10:30 PM",
+      "isOpen": true
+    },
+    {
+      "name": "Burger Bite",
+      "cuisine": "American",
+      "location": "321 Food Court, Miami, FL 33101",
+      "rating": 4.3,
+      "deliveryTime": "20-30 mins",
+      "priceRange": "$",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500",
+      "description": "Juicy burgers and crispy fries",
+      "phone": "+1234567893",
+      "openingHours": "10:00 AM - 11:00 PM",
+      "isOpen": true
+    },
+    {
+      "name": "Taco Fiesta",
+      "cuisine": "Mexican",
+      "location": "555 Sunset Blvd, Austin, TX 78701",
+      "rating": 4.4,
+      "deliveryTime": "25-35 mins",
+      "priceRange": "$$",
+      "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500",
+      "description": "Authentic Mexican tacos and burritos",
+      "phone": "+1234567894",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "isOpen": true
+    },
+    {
+      "name": "Pasta Paradise",
+      "cuisine": "Italian",
+      "location": "888 Vine Street, Boston, MA 02101",
+      "rating": 4.8,
+      "deliveryTime": "30-40 mins",
+      "priceRange": "$$$",
+      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500",
+      "description": "Handmade pasta and Italian classics",
+      "phone": "+1234567895",
+      "openingHours": "12:00 PM - 11:00 PM",
+      "isOpen": true
+    }
+  ],
+  "menus": [
+    {
+      "restaurantName": "Pizza Palace",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "description": "Classic tomato, mozzarella, and basil",
+          "price": 12.99,
+          "category": "Pizza",
+          "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "description": "Loaded with pepperoni and cheese",
+          "price": 14.99,
+          "category": "Pizza",
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "BBQ Chicken Pizza",
+          "description": "BBQ sauce, grilled chicken, onions",
+          "price": 15.99,
+          "category": "Pizza",
+          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Garlic Bread",
+          "description": "Crispy bread with garlic butter",
+          "price": 5.99,
+          "category": "Sides",
+          "image": "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "Caesar Salad",
+          "description": "Fresh romaine with Caesar dressing",
+          "price": 7.99,
+          "category": "Salads",
+          "image": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "restaurantName": "Sushi World",
+      "items": [
+        {
+          "name": "California Roll",
+          "description": "Crab, avocado, and cucumber",
+          "price": 8.99,
+          "category": "Rolls",
+          "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Spicy Tuna Roll",
+          "description": "Fresh tuna with spicy mayo",
+          "price": 10.99,
+          "category": "Rolls",
+          "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Dragon Roll",
+          "description": "Eel, cucumber, avocado on top",
+          "price": 13.99,
+          "category": "Rolls",
+          "image": "https://images.unsplash.com/photo-1564489563601-c53cfc451e93?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Salmon Sashimi",
+          "description": "5 pieces of fresh salmon",
+          "price": 11.99,
+          "category": "Sashimi",
+          "image": "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Miso Soup",
+          "description": "Traditional Japanese soup",
+          "price": 3.99,
+          "category": "Soup",
+          "image": "https://images.unsplash.com/photo-1604943652949-64d1c36501e7?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "restaurantName": "Curry Haven",
+      "items": [
+        {
+          "name": "Chicken Tikka Masala",
+          "description": "Tender chicken in creamy tomato sauce",
+          "price": 13.99,
+          "category": "Main Course",
+          "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Butter Chicken",
+          "description": "Rich and creamy chicken curry",
+          "price": 14.99,
+          "category": "Main Course",
+          "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "description": "Indian cottage cheese in spicy gravy",
+          "price": 12.99,
+          "category": "Main Course",
+          "image": "https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "Garlic Naan",
+          "description": "Soft flatbread with garlic",
+          "price": 2.99,
+          "category": "Bread",
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "Biryani",
+          "description": "Fragrant rice with spices and chicken",
+          "price": 15.99,
+          "category": "Rice",
+          "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "restaurantName": "Burger Bite",
+      "items": [
+        {
+          "name": "Classic Burger",
+          "description": "Beef patty, lettuce, tomato, cheese",
+          "price": 9.99,
+          "category": "Burgers",
+          "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Double Cheeseburger",
+          "description": "Two beef patties with double cheese",
+          "price": 12.99,
+          "category": "Burgers",
+          "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400",
+          "isVegetarian": false,
+          "isAvailable": true
+        },
+        {
+          "name": "Veggie Burger",
+          "description": "Plant-based patty with fresh veggies",
+          "price": 10.99,
+          "category": "Burgers",
+          "image": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "French Fries",
+          "description": "Crispy golden fries",
+          "price": 3.99,
+          "category": "Sides",
+          "image": "https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        },
+        {
+          "name": "Chocolate Shake",
+          "description": "Thick chocolate milkshake",
+          "price": 4.99,
+          "category": "Drinks",
+          "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400",
+          "isVegetarian": true,
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "10 Best Pizza Toppings You Must Try",
+      "content": "Pizza is one of the most beloved foods worldwide, and the secret to a great pizza lies in its toppings. From classic Margherita to adventurous combinations, here are 10 pizza toppings that will elevate your pizza experience.\n\n1. Fresh Mozzarella - The foundation of any great pizza\n2. Pepperoni - A timeless classic that never disappoints\n3. Mushrooms - Earthy and delicious\n4. Fresh Basil - Adds a fresh, aromatic touch\n5. Italian Sausage - Savory and flavorful\n6. Caramelized Onions - Sweet and rich\n7. Roasted Red Peppers - Smoky and vibrant\n8. Prosciutto - Delicate and salty\n9. Arugula - Fresh and peppery finish\n10. Truffle Oil - For that gourmet touch\n\nExperiment with these toppings and create your perfect pizza!",
+      "author": "Chef Giovanni",
+      "date": "2024-11-01T00:00:00.000Z",
+      "category": "Italian Cuisine",
+      "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800",
+      "tags": ["pizza", "italian", "toppings", "food guide"]
+    },
+    {
+      "id": 2,
+      "title": "The Art of Making Perfect Sushi at Home",
+      "content": "Sushi is not just food; it's an art form that has been perfected over centuries in Japan. Making sushi at home might seem intimidating, but with the right techniques and ingredients, you can create restaurant-quality sushi in your own kitchen.\n\nEssential Ingredients:\n- Sushi rice (short-grain Japanese rice)\n- Rice vinegar, sugar, and salt for seasoning\n- Fresh fish (salmon, tuna) or vegetables\n- Nori (seaweed sheets)\n- Wasabi and soy sauce\n\nBasic Steps:\n1. Cook and season your rice properly\n2. Prepare your fillings\n3. Master the rolling technique\n4. Slice with a sharp knife\n5. Serve immediately\n\nPro Tips:\n- Keep your hands wet to prevent rice from sticking\n- Don't overfill your rolls\n- Use bamboo mat for even rolling\n- Practice makes perfect!\n\nWith patience and practice, you'll be making beautiful sushi rolls that taste as good as they look!",
+      "author": "Chef Yuki Tanaka",
+      "date": "2024-10-28T00:00:00.000Z",
+      "category": "Japanese Cuisine",
+      "img": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800",
+      "tags": ["sushi", "japanese", "cooking guide", "homemade"]
+    },
+    {
+      "id": 3,
+      "title": "Spice Guide: Understanding Indian Curry Flavors",
+      "content": "Indian cuisine is renowned for its complex and aromatic curries, each with its unique blend of spices. Understanding these spices is key to mastering Indian cooking.\n\nEssential Spices:\n- Cumin - Earthy and warm\n- Coriander - Citrusy and sweet\n- Turmeric - Golden color and earthy flavor\n- Garam Masala - Warming spice blend\n- Cardamom - Sweet and floral\n- Cinnamon - Sweet and woody\n- Fenugreek - Slightly bitter and nutty\n\nPopular Curry Types:\n1. Tikka Masala - Creamy tomato-based curry\n2. Vindaloo - Spicy and tangy\n3. Korma - Mild and creamy\n4. Madras - Hot and spicy\n5. Butter Chicken - Rich and smooth\n\nCooking Tips:\n- Toast whole spices before grinding for maximum flavor\n- Bloom spices in hot oil to release their aromas\n- Balance spices with cream or yogurt\n- Layer flavors gradually\n\nExplore the world of Indian curries and discover your favorite flavor profiles!",
+      "author": "Chef Priya Sharma",
+      "date": "2024-10-25T00:00:00.000Z",
+      "category": "Indian Cuisine",
+      "img": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800",
+      "tags": ["indian", "curry", "spices", "cooking guide"]
+    },
+    {
+      "id": 4,
+      "title": "The Ultimate Guide to Building the Perfect Burger",
+      "content": "A great burger is more than just meat between buns. It's about the perfect balance of flavors, textures, and quality ingredients. Here's how to build the ultimate burger at home.\n\nThe Foundation - The Patty:\n- Use 80/20 beef (80% lean, 20% fat)\n- Don't overwork the meat\n- Season generously with salt and pepper\n- Create a small dimple in the center\n- Cook to your preferred doneness\n\nThe Build (Bottom to Top):\n1. Bottom Bun - Toasted for texture\n2. Sauce - Mayo, ketchup, or special sauce\n3. Lettuce - Crisp iceberg or butter lettuce\n4. Tomato - Thick slices, seasoned\n5. Patty - The star of the show\n6. Cheese - Melted to perfection\n7. Pickles - For tanginess\n8. Onions - Raw, grilled, or caramelized\n9. Top Bun - Toasted\n\nPro Tips:\n- Let meat rest before cooking\n- Don't press down on patties while cooking\n- Melt cheese in final minute of cooking\n- Toast buns for better texture\n- Serve immediately\n\nFollow these steps and you'll create burger perfection every time!",
+      "author": "Chef Mike Johnson",
+      "date": "2024-10-20T00:00:00.000Z",
+      "category": "American Cuisine",
+      "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800",
+      "tags": ["burger", "american", "grilling", "cooking guide"]
+    },
+    {
+      "id": 5,
+      "title": "Street Food Around the World: A Culinary Journey",
+      "content": "Street food represents the heart and soul of a culture's culinary identity. From bustling Asian night markets to European food trucks, street food offers authentic flavors and unforgettable experiences.\n\nTop Street Foods by Region:\n\nAsia:\n- Pad Thai (Thailand) - Stir-fried noodles with tamarind sauce\n- Takoyaki (Japan) - Octopus-filled balls\n- Pani Puri (India) - Crispy shells with spicy water\n- Banh Mi (Vietnam) - French-Vietnamese sandwich\n\nAmericas:\n- Tacos (Mexico) - Endless variety of fillings\n- Hot Dogs (USA) - Classic street food\n- Empanadas (Argentina) - Savory pastries\n- Arepas (Colombia) - Corn cakes with fillings\n\nEurope:\n- Currywurst (Germany) - Curry-spiced sausage\n- Crepes (France) - Sweet or savory\n- Churros (Spain) - Fried dough with chocolate\n\nMiddle East:\n- Shawarma - Spiced meat wraps\n- Falafel - Crispy chickpea fritters\n- Kebabs - Grilled meat skewers\n\nStreet food is more than just quick bites—it's a window into the culture and traditions of different communities!",
+      "author": "Chef Maria Rodriguez",
+      "date": "2024-10-15T00:00:00.000Z",
+      "category": "World Cuisine",
+      "img": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800",
+      "tags": ["street food", "world cuisine", "travel", "food culture"]
+    },
+    {
+      "id": 6,
+      "title": "Healthy Eating: How to Make Nutritious Food Delicious",
+      "content": "Healthy eating doesn't have to be boring! With the right techniques and ingredients, you can create nutritious meals that are both satisfying and delicious.\n\nKey Principles:\n\n1. Embrace Whole Foods\n- Fresh vegetables and fruits\n- Whole grains (quinoa, brown rice, oats)\n- Lean proteins (chicken, fish, legumes)\n- Healthy fats (avocado, nuts, olive oil)\n\n2. Flavor Without Guilt\n- Use herbs and spices liberally\n- Roast vegetables to bring out natural sweetness\n- Add citrus for brightness\n- Experiment with different cooking methods\n\n3. Smart Substitutions\n- Greek yogurt instead of sour cream\n- Cauliflower rice for grain-free options\n- Zucchini noodles as pasta alternative\n- Banana or applesauce in baking\n\n4. Meal Prep Success\n- Plan your weekly menu\n- Batch cook proteins and grains\n- Pre-cut vegetables\n- Use clear containers for visibility\n\nSample Healthy Day:\n- Breakfast: Overnight oats with berries\n- Lunch: Quinoa bowl with roasted vegetables\n- Snack: Hummus with veggie sticks\n- Dinner: Grilled salmon with sweet potato\n\nRemember: Healthy eating is about balance, not restriction. Enjoy your food while nourishing your body!",
+      "author": "Nutritionist Sarah Chen",
+      "date": "2024-10-10T00:00:00.000Z",
+      "category": "Healthy Eating",
+      "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+      "tags": ["healthy", "nutrition", "meal prep", "wellness"]
+    },
+    {
+      "id": 7,
+      "title": "Coffee Culture: From Bean to Cup",
+      "content": "Coffee is more than just a morning beverage—it's a global phenomenon with rich history and diverse preparation methods. Let's explore the journey from bean to your favorite cup.\n\nCoffee Bean Types:\n- Arabica - Smooth, sweet, with complex flavors (70% of world's coffee)\n- Robusta - Strong, bitter, higher caffeine content\n- Liberica - Rare, unique woody flavor\n- Excelsa - Tart, fruity notes\n\nPopular Brewing Methods:\n\n1. Espresso - Concentrated, intense\n- Base for many coffee drinks\n- Requires specialized equipment\n- 25-30 second extraction\n\n2. Pour Over - Clean, nuanced flavors\n- Full control over brewing\n- Highlights bean characteristics\n\n3. French Press - Full-bodied, rich\n- Simple and forgiving\n- 4-minute steep time\n\n4. Cold Brew - Smooth, less acidic\n- 12-24 hour steeping\n- Perfect for hot weather\n\nCoffee Drinks Explained:\n- Espresso: Pure shot of coffee\n- Americano: Espresso + hot water\n- Cappuccino: Espresso + steamed milk + foam (1:1:1)\n- Latte: Espresso + steamed milk (1:3)\n- Macchiato: Espresso + milk foam\n- Mocha: Latte + chocolate\n\nTips for Better Coffee:\n- Use fresh, quality beans\n- Grind just before brewing\n- Use filtered water\n- Maintain proper water temperature (195-205°F)\n- Clean your equipment regularly\n\nDiscover your perfect brew and elevate your coffee experience!",
+      "author": "Barista Alex Thompson",
+      "date": "2024-10-05T00:00:00.000Z",
+      "category": "Beverages",
+      "img": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800",
+      "tags": ["coffee", "beverages", "brewing", "cafe culture"]
+    },
+    {
+      "id": 8,
+      "title": "Vegetarian & Vegan Options: Plant-Based Delights",
+      "content": "Plant-based eating is more than a trend—it's a delicious and sustainable way to enjoy food. Whether you're fully vegetarian, vegan, or just looking to eat more plants, there are countless flavorful options to explore.\n\nWhy Go Plant-Based?\n- Environmental sustainability\n- Health benefits\n- Ethical considerations\n- Culinary adventure\n\nProtein-Rich Plant Foods:\n- Legumes (lentils, chickpeas, beans)\n- Tofu and tempeh\n- Quinoa and other ancient grains\n- Nuts and seeds\n- Nutritional yeast\n\nDelicious Plant-Based Dishes:\n\n1. Buddha Bowls\n- Grain base (quinoa, rice)\n- Roasted vegetables\n- Protein (chickpeas, tofu)\n- Creamy dressing\n\n2. Veggie Burgers\n- Black bean patties\n- Mushroom and quinoa burgers\n- Chickpea falafel burgers\n\n3. Pasta Dishes\n- Creamy cashew alfredo\n- Marinara with vegetables\n- Pesto with pine nuts\n\n4. Curries and Stews\n- Chickpea curry\n- Lentil dal\n- Vegetable tagine\n\nFlavor Boosters:\n- Nutritional yeast for cheesy flavor\n- Smoked paprika for depth\n- Tahini for creaminess\n- Miso paste for umami\n- Fresh herbs for brightness\n\nVegan Substitutions:\n- Cashew cream for dairy cream\n- Aquafaba for eggs in baking\n- Coconut milk for richness\n- Nut butters for binding\n\nRestaurant Tips:\n- Don't be shy to ask for modifications\n- Look for naturally vegan cuisines (Indian, Thai, Mediterranean)\n- Many restaurants now have dedicated vegan menus\n\nPlant-based eating opens up a world of colorful, flavorful possibilities. Start exploring today!",
+      "author": "Chef Emma Green",
+      "date": "2024-09-30T00:00:00.000Z",
+      "category": "Vegetarian & Vegan",
+      "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+      "tags": ["vegan", "vegetarian", "plant-based", "healthy"]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+/* Navbar Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base styles for the navbar */
+nav {
+  font-family: 'Inter', sans-serif;
+  color: #f3f4f6; /* Light gray text for dark background */
+}
+
+/* Desktop navigation links */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #f3f4f6; /* Light gray text for dark background */
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f97316; /* Orange-500 */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f97316; /* Orange-500 */
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Login button */
+.login-button {
+  background-color: #f97316; /* Orange-500 */
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
+}
+
+.login-button:hover {
+  background-color: #ea580c; /* Orange-600 */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
+}
+
+/* Mobile navigation links */
+.mobile-nav-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f3f4f6; /* Light gray text for dark background */
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f97316; /* Orange-500 */
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #f97316; /* Orange-500 */
+}
+
+.mobile-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile login button */
+.mobile-login-button {
+  background-color: #f97316; /* Orange-500 */
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
+}
+
+.mobile-login-button:hover {
+  background-color: #ea580c; /* Orange-600 */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
+}
+
+/* Animation for navbar on page load */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+/* Cart badge animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-link span, .mobile-nav-link span {
+  animation: pulse 2s infinite;
+} 
