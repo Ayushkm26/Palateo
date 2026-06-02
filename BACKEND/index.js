@@ -16,8 +16,13 @@ const orderStatusRoutes = require('./routes/orderStatusRoutes');
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://palateo-a.vercel.app'
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow all origins during development
+  origin: allowedOrigins,
   credentials: true // Allow cookies to be sent
 }));
 connectDB(); // Connect to MongoDB
