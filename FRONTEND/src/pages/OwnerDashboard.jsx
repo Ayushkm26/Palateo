@@ -46,7 +46,7 @@ const OwnerDashboard = () => {
         if (token && parsedOwner.id) {
           // Fetch restaurant data
           const response = await axios.get(
-            `http://localhost:5000/api/owners/${parsedOwner.id}/restaurant`,
+            `https://palateo.onrender.com/api/owners/${parsedOwner.id}/restaurant`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           

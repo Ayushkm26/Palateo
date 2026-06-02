@@ -73,7 +73,7 @@ const Menu = () => {
   // Fetch user's cart
   const fetchUserCart = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/cart/${userId}`);
+      const response = await axios.get(`https://palateo.onrender.com/api/cart/${userId}`);
       console.log(response.data.items)
       if (response.data && response.data.items) {
         setCart(response.data.items);
@@ -89,12 +89,12 @@ const Menu = () => {
       try {
         setLoading(true);
         // Fetch restaurant details
-        const restaurantResponse = await axios.get(`http://localhost:5000/api/restaurants/${id}`);
+        const restaurantResponse = await axios.get(`https://palateo.onrender.com/api/restaurants/${id}`);
         setRestaurant(restaurantResponse.data.restaurant); // <-- fix here
         setEditedRestaurant(restaurantResponse.data.restaurant);
 
         // Fetch menu items
-        const menuResponse = await axios.get(`http://localhost:5000/api/menu/${id}`);
+        const menuResponse = await axios.get(`https://palateo.onrender.com/api/menu/${id}`);
         
         // Check if menu exists and has items
         if (menuResponse.data && menuResponse.data.success) {
@@ -126,7 +126,7 @@ const Menu = () => {
     try {
       const ownerToken = localStorage.getItem('ownerToken');
       const response = await axios.post(
-        `http://localhost:5000/api/menu/${id}/items`,
+        `https://palateo.onrender.com/api/menu/${id}/items`,
         newMenuItem,
         {
           headers: {
@@ -170,7 +170,7 @@ const Menu = () => {
     try {
       const ownerToken = localStorage.getItem('ownerToken');
       const response = await axios.delete(
-        `http://localhost:5000/api/menu/${id}/items/${itemId}`,
+        `https://palateo.onrender.com/api/menu/${id}/items/${itemId}`,
         {
           headers: {
             'Authorization': `Bearer ${ownerToken}`
@@ -246,7 +246,7 @@ const Menu = () => {
       }
       // Clear the cart first
       try {
-        await axios.delete(`http://localhost:5000/api/cart/${user.id}/clear`);
+        await axios.delete(`https://palateo.onrender.com/api/cart/${user.id}/clear`);
       } catch (error) {
         console.error('Error clearing cart:', error);
         return;
@@ -263,7 +263,7 @@ const Menu = () => {
     };
     
     try {
-      const response = await axios.post(`http://localhost:5000/api/cart/${user.id}/add`, itemWithNumberPrice);
+      const response = await axios.post(`https://palateo.onrender.com/api/cart/${user.id}/add`, itemWithNumberPrice);
       if (response.data && response.data.items) {
         setCart(response.data.items);
         // Show success message
@@ -284,7 +284,7 @@ const Menu = () => {
     if (!user) return;
 
     try {
-      const response = await axios.delete(`http://localhost:5000/api/cart/${user.id}/remove/${itemId}`);
+      const response = await axios.delete(`https://palateo.onrender.com/api/cart/${user.id}/remove/${itemId}`);
       if (response.data && response.data.items) {
         setCart(response.data.items);
       }
@@ -306,7 +306,7 @@ const Menu = () => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/cart/${user.id}/update`, {
+      const response = await axios.put(`https://palateo.onrender.com/api/cart/${user.id}/update`, {
         itemId,
         quantity: newQuantity
       });
@@ -323,7 +323,7 @@ const Menu = () => {
   const handleUpdateRestaurant = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/owners/${owner.id}/restaurant`,
+        `https://palateo.onrender.com/api/owners/${owner.id}/restaurant`,
         editedRestaurant
       );
       setRestaurant(response.data);

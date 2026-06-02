@@ -12,7 +12,7 @@ const AdminRestaurantView = () => {
 
   useEffect(() => {
     // Fetch all restaurants
-    axios.get('http://localhost:5000/api/restaurants')
+    axios.get('https://palateo.onrender.com/api/restaurants')
       .then(res => {
         // Accept both array and object response formats
         if (Array.isArray(res.data)) {
@@ -33,13 +33,13 @@ const AdminRestaurantView = () => {
     const restId = String(restaurant.id);
     try {
       // Fetch owner
-      const ownerRes = await axios.get(`http://localhost:5000/api/admin-restaurant-owner/by-restaurant/${restId}`);
+      const ownerRes = await axios.get(`https://palateo.onrender.com/api/admin-restaurant-owner/by-restaurant/${restId}`);
       setOwner(ownerRes.data.owner || null);
       // Fetch menu
-      const menuRes = await axios.get(`http://localhost:5000/api/menu/${restId}`);
+      const menuRes = await axios.get(`https://palateo.onrender.com/api/menu/${restId}`);
       setMenu(menuRes.data.menu || []);
       // Fetch orders
-      const ordersRes = await axios.get(`http://localhost:5000/api/orders/restaurant/${restId}`);
+      const ordersRes = await axios.get(`https://palateo.onrender.com/api/orders/restaurant/${restId}`);
       setOrders(ordersRes.data.orders || []);
     } catch (err) {
       setError('Failed to load restaurant details.');

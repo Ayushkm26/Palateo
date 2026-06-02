@@ -20,7 +20,7 @@ const UserDashboard = () => {
 
   useEffect(() => {
     if (user && user.id) {
-      axios.get(`http://localhost:5000/api/orders/user/${user.id}`)
+      axios.get(`https://palateo.onrender.com/api/orders/user/${user.id}`)
         .then(res => {
           console.log('User Orders:', res.data);
           if (res.data.orders) setOrders(res.data.orders);
@@ -31,7 +31,7 @@ const UserDashboard = () => {
   }, [user]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/restaurants')
+    axios.get('https://palateo.onrender.com/api/restaurants')
       .then(res => setRestaurants(res.data.restaurants || []));
   }, []);
 

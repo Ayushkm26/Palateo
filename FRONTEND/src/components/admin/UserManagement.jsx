@@ -10,7 +10,7 @@ const UserManagement = () => {
   // Fetch users
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/users');
+      const response = await axios.get('https://palateo.onrender.com/api/users');
       setUsers(response.data.users);
       setLoading(false);
     } catch (error) {
@@ -28,7 +28,7 @@ const UserManagement = () => {
   const handleDeleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/${userId}`);
+        await axios.delete(`https://palateo.onrender.com/api/users/${userId}`);
         toast.success('User deleted successfully');
         // Refresh user list
         fetchUsers();

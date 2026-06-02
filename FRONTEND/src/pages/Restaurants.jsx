@@ -34,7 +34,7 @@ const Restaurants = () => {
     const fetchRestaurants = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/restaurants', {
+        const response = await axios.get('https://palateo.onrender.com/api/restaurants', {
           timeout: 5000 // 5 second timeout
         });
         // Fix: Use response.data.restaurants

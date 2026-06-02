@@ -24,7 +24,7 @@ const ProtectedOwnerRoute = ({ children }) => {
       }
       
       try {
-        await axios.get(`http://localhost:5000/api/owners/${ownerData.id}/restaurant`, {
+        await axios.get(`https://palateo.onrender.com/api/owners/${ownerData.id}/restaurant`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         

@@ -19,7 +19,7 @@ const CheckoutPage = () => {
     if (userStr) {
       const userObj = JSON.parse(userStr);
       // Fetch user from backend for latest name and id
-      axios.get(`http://localhost:5000/api/users/${userObj.id}`)
+      axios.get(`https://palateo.onrender.com/api/users/${userObj.id}`)
         .then(res => {
           setUser({
             id: res.data.id || userObj.id,
@@ -40,13 +40,13 @@ const CheckoutPage = () => {
     }
     // Fetch cart for this user from backend
     if (userId) {
-      axios.get(`http://localhost:5000/api/cart/${userId}`)
+      axios.get(`https://palateo.onrender.com/api/cart/${userId}`)
         .then(res => {
           setCart(res.data.items || []);
           // Fetch restaurant details for the first item in cart
           if (res.data.items && res.data.items.length > 0) {
             const restId = res.data.items[0].restaurantId;
-            axios.get(`http://localhost:5000/api/restaurants/${restId}`)
+            axios.get(`https://palateo.onrender.com/api/restaurants/${restId}`)
               .then(rres => {
                 // Fix: Use rres.data.restaurant.name
                 setRestaurant({
@@ -79,7 +79,7 @@ const CheckoutPage = () => {
         phone: user.phone,
         cartItems: cart
       };
-      await axios.post('http://localhost:5000/api/orders/place', orderPayload);
+      await axios.post('https://palateo.onrender.com/api/orders/place', orderPayload);
       setOrderPlaced(true);
       setLoading(false);
       setTimeout(() => {

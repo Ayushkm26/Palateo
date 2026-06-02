@@ -23,7 +23,7 @@ const ProtectedAdminRoute = ({ children }) => {
       
       try {
         // Verify token with backend
-        await axios.get('http://localhost:5000/api/admin/profile', {
+        await axios.get('https://palateo.onrender.com/api/admin/profile', {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true
         });

@@ -21,7 +21,7 @@ const ReviewForm = ({ order, restaurant, onReviewSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    await axios.post('http://localhost:5000/api/orders/review', {
+    await axios.post('https://palateo.onrender.com/api/orders/review', {
       restaurantId: restaurant.id,
       userId: order.userId,
       orderId: order.id,
@@ -64,13 +64,13 @@ const OrderTracking = () => {
   const [showReview, setShowReview] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/orders/${orderId}`)
+    axios.get(`https://palateo.onrender.com/api/orders/${orderId}`)
       .then(res => setOrder(res.data.order));
   }, [orderId]);
 
   useEffect(() => {
     if (order && order.restaurantId) {
-      axios.get(`http://localhost:5000/api/restaurants/${order.restaurantId}`)
+      axios.get(`https://palateo.onrender.com/api/restaurants/${order.restaurantId}`)
         .then(res => setRestaurant(res.data))
         .catch(() => setRestaurant(null));
     }

@@ -17,7 +17,7 @@ const AdminLogin = () => {
     
     // If admin token exists, try to validate it
     if (token) {
-      axios.get('http://localhost:5000/api/admin/profile', {
+      axios.get('https://palateo.onrender.com/api/admin/profile', {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true // Important for cookies
       })
@@ -47,7 +47,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/admin/login', 
+        'https://palateo.onrender.com/api/admin/login', 
         formData,
         { withCredentials: true } // Important for cookies
       );

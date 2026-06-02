@@ -38,7 +38,7 @@ const BecomeOwner = () => {
 
     try {
       // Register the owner
-      const ownerResponse = await axios.post('http://localhost:5000/api/owners/register', {
+      const ownerResponse = await axios.post('https://palateo.onrender.com/api/owners/register', {
         name: formData.name,
         email: formData.email,
         password: formData.password
@@ -49,7 +49,7 @@ const BecomeOwner = () => {
       }
 
       // Create the restaurant with the owner's ID
-      const restaurantResponse = await axios.post('http://localhost:5000/api/owners/restaurants', {
+      const restaurantResponse = await axios.post('https://palateo.onrender.com/api/owners/restaurants', {
         ownerId: ownerResponse.data.owner.id,
         name: formData.restaurantName,
         image: formData.restaurantImage,

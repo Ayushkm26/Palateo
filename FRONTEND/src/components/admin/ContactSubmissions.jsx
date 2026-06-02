@@ -10,7 +10,7 @@ const ContactSubmissions = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/contact');
+        const response = await axios.get('https://palateo.onrender.com/api/contact');
         if (response.data && response.data.contacts) {
           // Sort contacts by date, newest first
           const sortedContacts = response.data.contacts.sort((a, b) => 

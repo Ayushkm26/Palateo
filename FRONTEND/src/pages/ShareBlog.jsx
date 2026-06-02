@@ -62,7 +62,7 @@ function ShareBlog() {
 
       console.log('Submitting blog data:', blogData); // Debug log
 
-      const response = await axios.post('http://localhost:5000/api/blogs', blogData);
+      const response = await axios.post('https://palateo.onrender.com/api/blogs', blogData);
       console.log('Server response:', response.data); // Debug log
       
       setShowSuccess(true);

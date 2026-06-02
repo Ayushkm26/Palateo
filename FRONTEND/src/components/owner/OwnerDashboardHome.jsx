@@ -10,7 +10,7 @@ const OwnerDashboardHome = ({ restaurant, owner }) => {
   useEffect(() => {
     if (restaurant?.id) {
       // Fetch menu items count
-      axios.get(`http://localhost:5000/api/menu/${restaurant.id}`)
+      axios.get(`https://palateo.onrender.com/api/menu/${restaurant.id}`)
         .then(res => {
           if (res.data && Array.isArray(res.data.menu)) {
             setMenuCount(res.data.menu.length);
@@ -21,7 +21,7 @@ const OwnerDashboardHome = ({ restaurant, owner }) => {
         .catch(() => setMenuCount(0));
 
       // Fetch orders and calculate active orders and total revenue
-      axios.get(`http://localhost:5000/api/orders/restaurant/${restaurant.id}`)
+      axios.get(`https://palateo.onrender.com/api/orders/restaurant/${restaurant.id}`)
         .then(res => {
           if (res.data && Array.isArray(res.data.orders)) {
             const orders = res.data.orders;

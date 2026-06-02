@@ -29,7 +29,7 @@ const MenuManager = ({ restaurant }) => {
   const fetchMenuItems = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:5000/api/menu/${restaurant.id}`);
+      const response = await axios.get(`https://palateo.onrender.com/api/menu/${restaurant.id}`);
       
       const menuData = response.data;
       if (menuData && menuData.success && Array.isArray(menuData.menu)) {
@@ -91,14 +91,14 @@ const MenuManager = ({ restaurant }) => {
 
       if (editItemId) {
         await axios.put(
-          `http://localhost:5000/api/menu/${restaurant.id}/items/${editItemId}`,
+          `https://palateo.onrender.com/api/menu/${restaurant.id}/items/${editItemId}`,
           itemData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setSuccess('Menu item updated successfully!');
       } else {
         await axios.post(
-          `http://localhost:5000/api/menu/${restaurant.id}/items`,
+          `https://palateo.onrender.com/api/menu/${restaurant.id}/items`,
           itemData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -143,7 +143,7 @@ const MenuManager = ({ restaurant }) => {
       }
 
       await axios.delete(
-        `http://localhost:5000/api/menu/${restaurant.id}/items/${itemId}`,
+        `https://palateo.onrender.com/api/menu/${restaurant.id}/items/${itemId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

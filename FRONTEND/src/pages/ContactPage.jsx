@@ -52,7 +52,7 @@ const ContactPage = () => {
     setIsSubmitting(true);
     
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://palateo.onrender.com/api/contact', formData);
       
       setShowSuccess(true);
       // Reset form after successful submission

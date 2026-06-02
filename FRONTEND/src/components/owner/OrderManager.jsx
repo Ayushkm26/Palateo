@@ -9,7 +9,7 @@ const OrderManager = ({ restaurant }) => {
   useEffect(() => {
     // Fetch orders for this restaurant from backend
     if (restaurant && restaurant.id) {
-      axios.get(`http://localhost:5000/api/orders/restaurant/${restaurant.id}`)
+      axios.get(`https://palateo.onrender.com/api/orders/restaurant/${restaurant.id}`)
         .then(res => {
           // Transform backend order data to match UI structure
           const fetchedOrders = (res.data.orders || [])
@@ -46,10 +46,10 @@ const OrderManager = ({ restaurant }) => {
   // Update order status
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/order-status/${orderId}/status`, { status: newStatus });
+      await axios.put(`https://palateo.onrender.com/api/order-status/${orderId}/status`, { status: newStatus });
       // Refetch orders after update to ensure UI is in sync with backend
       if (restaurant && restaurant.id) {
-        const res = await axios.get(`http://localhost:5000/api/orders/restaurant/${restaurant.id}`);
+        const res = await axios.get(`https://palateo.onrender.com/api/orders/restaurant/${restaurant.id}`);
         const fetchedOrders = (res.data.orders || []).map((order, idx) => ({
           id: order._id || order.id, // Use _id if available
           customer: order.name,

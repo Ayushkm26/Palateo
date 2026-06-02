@@ -19,7 +19,7 @@ const Blogs = () => {
         setLoading(true);
         setError(null);
         
-        const response = await fetch('http://localhost:5000/api/blogs');
+        const response = await fetch('https://palateo.onrender.com/api/blogs');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

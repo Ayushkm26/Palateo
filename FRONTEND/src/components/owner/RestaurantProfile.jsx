@@ -56,7 +56,7 @@ const RestaurantProfile = ({ restaurant, owner }) => {
 
       // Update restaurant details
       await axios.put(
-        `http://localhost:5000/api/owners/${owner.id}/restaurant`,
+        `https://palateo.onrender.com/api/owners/${owner.id}/restaurant`,
         updatedData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

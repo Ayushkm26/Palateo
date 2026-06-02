@@ -27,7 +27,7 @@ const RegisterModal = ({ isOpen, onClose, onSwitchToLogin }) => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/users/register', {
+      await axios.post('https://palateo.onrender.com/api/users/register', {
         username: formData.username,
         email: formData.email,
         password: formData.password

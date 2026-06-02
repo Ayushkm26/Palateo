@@ -12,10 +12,10 @@ const AdminDashboardHome = () => {
   useEffect(() => {
     // Fetch all counts in parallel
     Promise.all([
-      axios.get('http://localhost:5000/api/users'),
-      axios.get('http://localhost:5000/api/blogs'),
-      axios.get('http://localhost:5000/api/restaurants'),
-      axios.get('http://localhost:5000/api/contact'),
+      axios.get('https://palateo.onrender.com/api/users'),
+      axios.get('https://palateo.onrender.com/api/blogs'),
+      axios.get('https://palateo.onrender.com/api/restaurants'),
+      axios.get('https://palateo.onrender.com/api/contact'),
     ]).then(([usersRes, blogsRes, restaurantsRes, contactsRes]) => {
       setCounts({
         users: Array.isArray(usersRes.data) ? usersRes.data.length : (usersRes.data.users?.length || 0),

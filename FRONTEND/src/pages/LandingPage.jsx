@@ -156,7 +156,7 @@ const LandingPage = () => {
   const searchRestaurants = async (query) => {
     try {
       setIsSearching(true);
-      const response = await axios.get('http://localhost:5000/api/restaurants');
+      const response = await axios.get('https://palateo.onrender.com/api/restaurants');
       
       if (response.data && Array.isArray(response.data.restaurants)) {
         const filtered = response.data.restaurants.filter(restaurant => 

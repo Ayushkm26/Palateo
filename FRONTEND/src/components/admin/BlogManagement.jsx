@@ -15,7 +15,7 @@ const BlogManagement = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/blogs');
+      const response = await axios.get('https://palateo.onrender.com/api/blogs');
       if (response.data && response.data.blogs) {
         const sortedBlogs = response.data.blogs.sort((a, b) => 
           new Date(b.createdAt) - new Date(a.createdAt)
@@ -35,7 +35,7 @@ const BlogManagement = () => {
   const handleDelete = async (blogId) => {
     if (window.confirm('Are you sure you want to delete this blog?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/blogs/${blogId}`);
+        await axios.delete(`https://palateo.onrender.com/api/blogs/${blogId}`);
         setBlogs(blogs.filter(blog => blog._id !== blogId));
         alert('Blog deleted successfully');
       } catch (err) {
@@ -47,7 +47,7 @@ const BlogManagement = () => {
 
   const handleView = async (blogId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/blogs/${blogId}`);
+      const response = await axios.get(`https://palateo.onrender.com/api/blogs/${blogId}`);
       if (response.data && response.data.blog) {
         setSelectedBlog(response.data.blog);
         setShowModal(true);

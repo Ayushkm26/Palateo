@@ -27,7 +27,7 @@ const AdminDashboard = () => {
         // Verify with backend
         const token = localStorage.getItem('admin_token');
         if (token) {
-          const response = await axios.get('http://localhost:5000/api/admin/profile', {
+          const response = await axios.get('https://palateo.onrender.com/api/admin/profile', {
             headers: { Authorization: `Bearer ${token}` },
             withCredentials: true
           });
@@ -45,7 +45,7 @@ const AdminDashboard = () => {
     try {
       // Call the logout endpoint
       await axios.post(
-        'http://localhost:5000/api/admin/logout',
+        'https://palateo.onrender.com/api/admin/logout',
         {},
         { withCredentials: true }
       );
