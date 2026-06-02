@@ -3,10 +3,13 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const connectDB = async ()=>{
-    await mongoose.connect(process.env.MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    }).then(()=>{
+    const mongoUri = process.env.MONGO_URI?.trim();
+
+    if (!mongoUri || !mongoUri.startsWith('mongodb://') && !mongoUri.startsWith('mongodb+srv://')) {
+        throw new Error('Invalid MONGO_URI. Set it to a value starting with mongodb:// or mongodb+srv://');
+    }
+
+    await mongoose.connect(mongoUri).then(()=>{
         console.log("MongoDB connected");
     }).catch((err)=>{
         console.log("MongoDB connection error: ", err);
